@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<title>Shinhan Premier / superSOL — Sample Deck</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="deck-stage.js"></script>
+<style>
+  html,body{margin:0;padding:0;background:#000;}
+  deck-stage section{
+    width:1280px;height:720px;
+    background:#fff;
+    font-family:var(--font-sans);
+    color:var(--fg1);
+    position:relative;
+    overflow:hidden;
+  }
+  .chapter{
+    position:absolute;top:24px;left:36px;
+    font-size:14px;font-weight:700;color:var(--shinhan-blue-deep);
+    letter-spacing:-0.005em;
+    line-height:1.1;
+  }
+  .corner-logo{position:absolute;bottom:28px;right:36px;height:24px;}
+  .footer-rule{position:absolute;bottom:0;left:0;right:0;height:80px;background:url('../assets/divider-arrows.png') center bottom/cover no-repeat;opacity:.5;pointer-events:none;}
+
+  /* Top divider — sits just below the chapter title with a
+     tight gap, matches Dividers & Ornaments. */
+  .premier-rule{
+    position:absolute;
+    top:46px; left:36px; right:78px;
+    height:1px;
+    background: var(--shinhan-blue-deep);
+  }
+  .premier-p{
+    position:absolute;
+    top:24px;
+    right:30px;
+    width:40px;
+    height:46px;
+    overflow:hidden;
+  }
+  .premier-p img{
+    position:absolute;
+    right:0; top:0;
+    height:100%;
+    width:auto;
+    display:block;
+  }
+  .watermark-p{position:absolute;right:-120px;bottom:-160px;width:760px;opacity:.5;}
+  .h-blue{color:var(--shinhan-blue-deep);}
+  .h-gold{color:var(--premier-gold);}
+</style>
+</head>
+<body>
+<deck-stage>
+
+<!-- 01 TITLE -->
+<section data-screen-label="01 Title">
+  <img class="watermark-p" src="../assets/bg-watermark-p.png" alt=""/>
+  <img src="../assets/logo-shinhan-premier.png" alt="" style="position:absolute;top:36px;right:36px;height:34px;"/>
+  <div style="position:absolute;left:90px;top:200px;max-width:1100px;">
+    <div style="font-family:var(--font-mono);font-size:14px;color:var(--fg3);letter-spacing:.04em;text-transform:uppercase;">Premier Division · Workshop</div>
+    <div style="font-size:64px;font-weight:700;line-height:1.1;letter-spacing:-0.02em;margin-top:14px;color:var(--fg1);">2월 신한Premier총괄<br/>본부장 워크샵 <span class="h-blue">(오전 session)</span></div>
+    <div style="margin-top:36px;font-size:18px;color:var(--fg3);">25.02.26 · 신한Premier기획부</div>
+  </div>
+  <div class="footer-rule"></div>
+  <img class="corner-logo" src="../assets/logo-shinhan-securities.png" alt=""/>
+</section>
+
+<!-- 02 CHAPTER MARKER -->
+<section data-screen-label="02 Chapter">
+  <div class="chapter">Ⅲ-1. 본부장워크샵 논의 _New 슈퍼SOL — 1. 추진 경과</div>
+  <div class="premier-rule"></div>
+  <div class="premier-p"><img src="../assets/divider-premier.png" alt=""/></div>
+  <div style="position:absolute;left:60px;top:200px;max-width:1160px;">
+    <div style="font-size:48px;font-weight:700;line-height:1.15;color:var(--fg1);letter-spacing:-0.015em;">
+      現 슈퍼<span class="h-blue">SOL</span>의 한계를 극복하고 혁신적 서비스 제공을 위해<br/>
+      SOL뱅크 기반의 <span class="h-blue">New 슈퍼SOL</span>로 再구축 진행 중
+    </div>
+    <div style="margin-top:28px;font-size:18px;color:var(--fg3);max-width:920px;line-height:1.55;">
+      그룹의 사업 추진 방향 설정 완료 후 당사는 커버리지 확대를 위해 TF 구성 후 플랫폼 구축 중
+    </div>
+  </div>
+  <img class="corner-logo" src="../assets/logo-shinhan-securities.png" alt=""/>
+</section>
+
+<!-- 03 AS-IS / TO-BE TABLE -->
+<section data-screen-label="03 Comparison">
+  <div class="chapter">Ⅲ-1. 본부장워크샵 논의 _New 슈퍼SOL — 1. 추진 경과</div>
+  <div class="premier-rule"></div>
+  <div class="premier-p"><img src="../assets/divider-premier.png" alt=""/></div>
+  <div style="position:absolute;left:60px;top:130px;right:60px;">
+    <div style="font-size:34px;font-weight:700;color:var(--fg1);">As-is / To-be</div>
+    <table style="width:100%;margin-top:24px;border-collapse:separate;border-spacing:0;font-size:15px;">
+      <thead>
+        <tr>
+          <th style="width:18%;text-align:left;padding:14px 16px;background:#eef1f7;color:var(--fg2);font-weight:700;border-radius:8px 0 0 0;">구분</th>
+          <th style="text-align:left;padding:14px 18px;background:#eef1f7;color:var(--fg2);font-weight:700;">As-is · 한계점</th>
+          <th style="text-align:left;padding:14px 18px;background:var(--shinhan-blue);color:#fff;font-weight:700;border-radius:0 8px 0 0;">To-be · New 슈퍼SOL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:18px 16px;font-weight:700;color:var(--fg1);border-bottom:1px solid var(--line);">채널</td>
+          <td style="padding:18px 18px;color:var(--fg2);border-bottom:1px solid var(--line);line-height:1.5;">신규 독립 앱 기반 · 별도 앱 설치 필요 · 장기간/고비용 소요</td>
+          <td style="padding:18px 18px;color:var(--fg1);border-bottom:1px solid var(--line);line-height:1.5;background:#f5f8ff;">SOL뱅크 기반의 New 슈퍼SOL 구축 (카/증/라가 입점)</td>
+        </tr>
+        <tr>
+          <td style="padding:18px 16px;font-weight:700;color:var(--fg1);border-bottom:1px solid var(--line);">서비스 커버리지</td>
+          <td style="padding:18px 18px;color:var(--fg2);border-bottom:1px solid var(--line);line-height:1.5;">그룹사별 핵심 서비스 선별 (커버리지 30% 수준)</td>
+          <td style="padding:18px 18px;color:var(--fg1);border-bottom:1px solid var(--line);line-height:1.5;background:#f5f8ff;">고객 체감 커버리지 <b style="color:var(--shinhan-blue);">100%</b> 달성</td>
+        </tr>
+        <tr>
+          <td style="padding:18px 16px;font-weight:700;color:var(--fg1);">차별화</td>
+          <td style="padding:18px 18px;color:var(--fg2);line-height:1.5;">고혜택 · 비금융 서비스 확대 (멤버십 · 통합금융존)</td>
+          <td style="padding:18px 18px;color:var(--fg1);line-height:1.5;background:#f5f8ff;">혁신적 서비스로 차별화 (생성형 AI, Open 금융서비스 등)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <img class="corner-logo" src="../assets/logo-shinhan-securities.png" alt=""/>
+</section>
+
+<!-- 04 STRATEGY 3-COL -->
+<section data-screen-label="04 Strategy">
+  <div class="chapter">Ⅲ-1. 본부장워크샵 논의 _New 슈퍼SOL — 2. 전략적 목표</div>
+  <div class="premier-rule"></div>
+  <div class="premier-p"><img src="../assets/divider-premier.png" alt=""/></div>
+  <div style="position:absolute;left:60px;top:130px;right:60px;">
+    <div style="font-size:34px;font-weight:700;color:var(--fg1);">은행 고객을 증권 고객화 위한 전략</div>
+    <div style="margin-top:8px;font-size:15px;color:var(--fg3);">은행 고객의 금융 여정 內 자연스러운 투자 행동 연결</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px;">
+      <div style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow-sm);min-height:340px;">
+        <div style="font-family:var(--font-mono);font-size:12px;color:var(--shinhan-blue);font-weight:700;">2-1</div>
+        <div style="font-size:22px;font-weight:700;margin-top:10px;color:var(--fg1);line-height:1.3;">"토스를 뛰어넘는 고객경험"</div>
+        <div style="font-size:14px;color:var(--fg2);margin-top:14px;line-height:1.6;">누구나 쉽고 직관적인 UI/UX · Seg.별 UX, 간편모드, 쉬운 용어</div>
+        <div style="margin-top:16px;font-size:12px;color:var(--shinhan-blue-deep);font-weight:700;letter-spacing:.06em;">PLATFORM</div>
+      </div>
+      <div style="background:var(--shinhan-blue);border-radius:16px;padding:22px;color:#fff;box-shadow:var(--shadow-blue);min-height:340px;">
+        <div style="font-family:var(--font-mono);font-size:12px;opacity:.85;font-weight:700;">2-2</div>
+        <div style="font-size:22px;font-weight:700;margin-top:10px;line-height:1.3;">"적시적 외형 확장 &amp; 지속 유입체계"</div>
+        <div style="font-size:14px;opacity:.92;margin-top:14px;line-height:1.6;">오픈효과·대규모 집중 마케팅 · Seg.별 지속형 맞춤 마케팅</div>
+        <div style="margin-top:16px;font-size:12px;opacity:.85;font-weight:700;letter-spacing:.06em;">MARKETING</div>
+      </div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow-sm);min-height:340px;">
+        <div style="font-family:var(--font-mono);font-size:12px;color:var(--shinhan-blue);font-weight:700;">2-3</div>
+        <div style="font-size:22px;font-weight:700;margin-top:10px;color:var(--fg1);line-height:1.3;">"쉽고 파격적인 새로운 혜택 제공"</div>
+        <div style="font-size:14px;color:var(--fg2);margin-top:14px;line-height:1.6;">최저가 수수료 · 은행 제휴계좌 기반 · 파격적 금리, 쿠폰</div>
+        <div style="margin-top:16px;font-size:12px;color:var(--shinhan-blue-deep);font-weight:700;letter-spacing:.06em;">PRODUCT</div>
+      </div>
+    </div>
+  </div>
+  <img class="corner-logo" src="../assets/logo-shinhan-securities.png" alt=""/>
+</section>
+
+<!-- 05 KPI / METRICS -->
+<section data-screen-label="05 KPI">
+  <div class="chapter">Ⅲ-1. 본부장워크샵 논의 _New 슈퍼SOL — 5. 출시 준비 현황</div>
+  <div class="premier-rule"></div>
+  <div class="premier-p"><img src="../assets/divider-premier.png" alt=""/></div>
+  <div style="position:absolute;left:60px;top:140px;right:60px;">
+    <div style="font-size:34px;font-weight:700;color:var(--fg1);">목표 — Grand Open '26.6.15</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px;">
+      <div style="background:#f5f7fb;border-radius:16px;padding:24px;">
+        <div style="font-size:13px;color:var(--fg3);font-weight:500;">그룹 전체 MAU</div>
+        <div style="font-size:48px;font-weight:700;color:var(--shinhan-blue);letter-spacing:-0.02em;margin-top:6px;">1,300<span style="font-size:22px;color:var(--fg2);font-weight:500;"> 만명</span></div>
+        <div style="font-size:12px;color:var(--fg4);margin-top:6px;">현재 1,000만</div>
+      </div>
+      <div style="background:#f5f7fb;border-radius:16px;padding:24px;">
+        <div style="font-size:13px;color:var(--fg3);font-weight:500;">증권 MAU</div>
+        <div style="font-size:48px;font-weight:700;color:var(--shinhan-blue);letter-spacing:-0.02em;margin-top:6px;">70<span style="font-size:22px;color:var(--fg2);font-weight:500;"> 만명</span></div>
+        <div style="font-size:12px;color:var(--fg4);margin-top:6px;">현재 35만</div>
+      </div>
+      <div style="background:#f5f7fb;border-radius:16px;padding:24px;">
+        <div style="font-size:13px;color:var(--fg3);font-weight:500;">신규회원</div>
+        <div style="font-size:48px;font-weight:700;color:var(--shinhan-blue);letter-spacing:-0.02em;margin-top:6px;">360<span style="font-size:22px;color:var(--fg2);font-weight:500;"> 만명</span></div>
+        <div style="font-size:12px;color:var(--fg4);margin-top:6px;">증권 50만</div>
+      </div>
+      <div style="background:var(--shinhan-blue);border-radius:16px;padding:24px;color:#fff;box-shadow:var(--shadow-blue);">
+        <div style="font-size:13px;opacity:.85;font-weight:500;">슈퍼증권 계좌</div>
+        <div style="font-size:48px;font-weight:700;letter-spacing:-0.02em;margin-top:6px;">200<span style="font-size:22px;opacity:.9;font-weight:500;"> 만좌</span></div>
+        <div style="font-size:12px;opacity:.85;margin-top:6px;">증권 50만 (실질 200만)</div>
+      </div>
+    </div>
+    <div style="margin-top:34px;display:flex;align-items:center;gap:14px;font-size:14px;color:var(--fg3);">
+      <span style="font-family:var(--font-mono);background:var(--bg2);padding:6px 12px;border-radius:8px;color:var(--fg2);">'25.5/18 ~ 6/12</span>
+      <span>사전예약</span>
+      <span style="opacity:.4;">→</span>
+      <span style="font-family:var(--font-mono);background:var(--bg2);padding:6px 12px;border-radius:8px;color:var(--fg2);">'25.6/16</span>
+      <span>고객 오픈</span>
+      <span style="opacity:.4;">→</span>
+      <span style="font-family:var(--font-mono);background:var(--shinhan-blue);color:#fff;padding:6px 12px;border-radius:8px;">'26.6.15</span>
+      <span style="color:var(--shinhan-blue);font-weight:700;">GRAND OPEN</span>
+    </div>
+  </div>
+  <img class="corner-logo" src="../assets/logo-shinhan-securities.png" alt=""/>
+</section>
+
+<!-- 06 BIG QUOTE -->
+<section data-screen-label="06 Quote" style="background:linear-gradient(135deg, #0023b3 0%, #0046ff 60%, #2878f5 100%);color:#fff;">
+  <div style="position:absolute;left:90px;top:240px;max-width:1100px;">
+    <div style="font-size:18px;opacity:.7;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-en);">Strategic Direction</div>
+    <div style="font-size:64px;font-weight:700;line-height:1.18;letter-spacing:-0.02em;margin-top:18px;">
+      "토스를 뛰어넘는<br/>고객경험을 만든다."
+    </div>
+    <div style="margin-top:32px;font-size:17px;opacity:.85;max-width:780px;line-height:1.55;">
+      누구나 쉽고 직관적인 UI/UX · Seg.별 간편모드 · 쉬운 용어 ·<br/>주식 고도화 · AI 비서로 투자 편의기능 개선
+    </div>
+  </div>
+  <img src="../assets/logo-shinhan-premier.png" alt="" style="position:absolute;bottom:40px;right:48px;height:32px;filter:brightness(0) invert(1);opacity:.85;"/>
+</section>
+
+</deck-stage>
+
+<script type="application/json" id="speaker-notes">
+[
+  "Title slide for the Premier Division Workshop on the New superSOL launch.",
+  "Chapter divider — section III-1 of the deck. Sets up the rebuild rationale.",
+  "As-is vs to-be comparison: standalone app at 30% coverage versus integrated SuperSOL at 100% perceived coverage.",
+  "Three-pillar strategy: platform UX, marketing scale, and product/benefit boldness. The middle pillar is highlighted because marketing is the focal effort for launch.",
+  "KPI targets — group MAU jumps from 10M to 13M and securities MAU doubles. Grand open is locked for 2026.06.15.",
+  "Closing rallying-cry slide — picks up the deck's tagline 'a customer experience that surpasses Toss.'"
+]
+</script>
+</body>
+</html>

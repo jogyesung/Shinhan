@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/>
+<title>Gradients</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  body{margin:0;padding:24px;background:var(--bg1);font-family:var(--font-sans);}
+  .row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .sw{border-radius:var(--radius-lg);padding:18px;height:130px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;box-shadow:var(--shadow-md);}
+  .sw .nm{font-weight:700;font-size:14px;}
+  .sw .pan{font-size:11px;opacity:0.85;}
+  .sw .hex{font-family:var(--font-mono);font-size:10px;opacity:0.9;}
+</style></head>
+<body>
+<div class="row">
+  <div class="sw" style="background:var(--grad-shinhan)"><div><div class="nm">grad-shinhan</div><div class="pan">Hero / app icon · 135°</div></div><div class="hex">#2878F5 → #0046FF → #0023B3</div></div>
+  <div class="sw" style="background:var(--grad-sky)"><div><div class="nm">grad-sky</div><div class="pan">Illustration wash · 180°</div></div><div class="hex">#8CD2F5 → #4BAFF5</div></div>
+  <div class="sw" style="background:var(--grad-premier)"><div><div class="nm">grad-premier</div><div class="pan">Premier accent · 135°</div></div><div class="hex">#C9A35A → #8A6A26</div></div>
+</div>
+</body></html>

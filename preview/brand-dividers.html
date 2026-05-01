@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"/>
+<title>Dividers & ornaments</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  body{margin:0;padding:24px;background:#fff;font-family:var(--font-sans);color:var(--fg1);}
+  h3{font-size:13px;font-weight:700;margin:0 0 4px;color:var(--fg1);}
+  .lbl{font-family:var(--font-mono);font-size:10px;color:var(--fg3);margin:2px 0 12px;letter-spacing:.04em;}
+  .frame{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:24px 28px 28px;
+    position:relative;
+    aspect-ratio: 1040 / 320;
+    overflow:hidden;
+  }
+  .chapter-label{
+    font-family:var(--font-sans);
+    font-size:16px;
+    font-weight:700;
+    color:var(--shinhan-blue-deep);
+    letter-spacing:-0.005em;
+    margin-bottom: 0;
+    line-height: 1.1;
+  }
+  .stage-divider{
+    position:relative;
+    height:32px;
+    margin-bottom:20px;
+  }
+  .stage-divider .line{
+    position:absolute;
+    left:0; right:42px;
+    top:6px;
+    height:1px;
+    background: var(--shinhan-blue-deep);
+  }
+  .stage-divider .p-mark{
+    position:absolute;
+    right:6px;
+    top:-12px;
+    width:30px;
+    height:36px;
+    overflow:hidden;
+  }
+  .stage-divider .p-mark img{
+    position:absolute;
+    right:0; top:0;
+    height:100%;
+    width:auto;
+    display:block;
+  }
+  .body-preview{
+    text-align:center;
+    font-size:18px;
+    font-weight:700;
+    line-height:1.5;
+    color:var(--fg1);
+  }
+  .body-preview .accent{ color:var(--shinhan-blue-deep); }
+  .body-preview .square-bullet{
+    text-align:left;
+    font-size:13px;
+    margin-top:18px;
+    padding-left:14px;
+    position:relative;
+    color:var(--fg1);
+  }
+  .body-preview .square-bullet::before{
+    content:"";
+    position:absolute;
+    left:0; top:7px;
+    width:7px; height:7px;
+    background: var(--shinhan-blue-deep);
+  }
+  .ann{
+    margin-top:14px;
+    font-size:11px;
+    color:var(--fg3);
+    line-height:1.5;
+  }
+  .ann code{
+    font-family:var(--font-mono);
+    background:var(--bg3);
+    padding:1px 5px;
+    border-radius:3px;
+    font-size:10px;
+  }
+</style></head>
+<body>
+
+<h3>divider-premier · slide top rule</h3>
+<div class="lbl">USAGE · 콘텐츠 슬라이드 상단 — 챕터 제목과 본문 영역을 구분</div>
+
+<div class="frame">
+  <div class="chapter-label">Ⅲ-1. 본부장워크샵 논의_New 슈퍼SOL — 1. 추진 경과</div>
+  <div class="stage-divider">
+    <div class="line"></div>
+    <div class="p-mark"><img src="../assets/divider-premier.png" alt="divider"/></div>
+  </div>
+  <div class="body-preview">
+    現 슈퍼SOL의 한계를 극복하고 혁신적 서비스 제공을 위해<br/>
+    <span class="accent">SOL뱅크 기반의 New 슈퍼SOL로 再구축 진행 中</span>
+    <div class="square-bullet">
+      하나의 앱에 그룹사별 금융 커버리지 100%를 달성하여 모든 업무 처리 완결 목표
+    </div>
+  </div>
+</div>
+
+<div class="ann">
+  콘텐츠 슬라이드 상단 패턴 — <b>챕터 제목 → divider → 본문</b>의 3단 구성. P 글리프는 라인보다
+  살짝 위로 떠 있어 슬라이드의 시그니처 마크 역할을 합니다.<br/>
+  원본 PPT 레이아웃 좌표 — <code>line off=40,51 / 926×49</code>, <code>P off=966,26 / 42×49</code>.
+</div>
+
+</body></html>

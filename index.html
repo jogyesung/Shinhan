@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Shinhan Financial Group — Design System</title>
+<link rel="stylesheet" href="colors_and_type.css"/>
+<style>
+  body{
+    margin:0;
+    background:var(--bg2);
+    font-family:var(--font-sans);
+    color:var(--fg1);
+  }
+  header{
+    padding:64px 48px 40px;
+    background:var(--grad-shinhan);
+    color:#fff;
+  }
+  header .eyebrow{
+    font-family:var(--font-en);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    opacity:.85;
+  }
+  header h1{
+    font-size:48px;
+    font-weight:700;
+    line-height:1.1;
+    letter-spacing:-0.02em;
+    margin:14px 0 12px;
+    color:#fff;
+  }
+  header p{
+    font-size:16px;
+    line-height:1.55;
+    opacity:.92;
+    max-width:720px;
+    color:#fff;
+  }
+  main{
+    max-width:1180px;
+    margin:0 auto;
+    padding:48px;
+  }
+  section{margin-bottom:56px;}
+  section > h2{
+    font-size:24px;
+    font-weight:700;
+    margin:0 0 6px;
+    letter-spacing:-0.01em;
+  }
+  section > .lede{
+    font-size:14px;
+    color:var(--fg3);
+    margin:0 0 22px;
+    max-width:780px;
+    line-height:1.55;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+    gap:14px;
+  }
+  .card{
+    display:block;
+    background:#fff;
+    border-radius:16px;
+    padding:18px 20px;
+    text-decoration:none;
+    color:var(--fg1);
+    box-shadow:var(--shadow-sm);
+    border:1px solid var(--line);
+    transition:box-shadow .18s ease, transform .18s ease;
+  }
+  .card:hover{
+    box-shadow:var(--shadow-md);
+    transform:translateY(-1px);
+  }
+  .card .nm{
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:-0.005em;
+  }
+  .card .desc{
+    font-size:12px;
+    color:var(--fg3);
+    margin-top:4px;
+    line-height:1.45;
+  }
+  .card .tag{
+    font-family:var(--font-mono);
+    font-size:10px;
+    color:var(--shinhan-blue-deep);
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    margin-bottom:8px;
+    font-weight:700;
+  }
+  .feature{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(360px,1fr));
+    gap:14px;
+  }
+  .feature .card{padding:22px 24px;}
+  .feature .card .nm{font-size:18px;}
+  .feature .card .desc{font-size:13px;margin-top:6px;}
+  footer{
+    padding:32px 48px 56px;
+    color:var(--fg3);
+    font-size:12px;
+    line-height:1.6;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  footer code{
+    font-family:var(--font-mono);
+    font-size:11px;
+    background:var(--bg3);
+    padding:2px 6px;
+    border-radius:4px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Shinhan Financial Group · 신한금융그룹</div>
+  <h1>Design System</h1>
+  <p>
+    Tokens, typography, components, slide templates, and UI kits for Shinhan
+    Investment Securities, Shinhan Premier, and the superSOL super-app. Reference
+    artifacts that translate the group's CI guidelines into reusable HTML/CSS.
+  </p>
+</header>
+
+<main>
+
+  <section>
+    <h2>Decks &amp; templates</h2>
+    <p class="lede">Premier-branded slide chrome, sample executive deck, and a copy-ready PPT shape gallery built on flat Shinhan Blue.</p>
+    <div class="feature">
+      <a class="card" href="slides/index.html">
+        <div class="tag">Sample deck · 1280 × 720</div>
+        <div class="nm">Premier · superSOL — Sample Deck</div>
+        <div class="desc">Six-slide executive deck (cover · chapter · As-is/To-be · 3-pillar strategy · KPI · closing quote) demonstrating divider, chapter labels, and pillar cards.</div>
+      </a>
+      <a class="card" href="slide_templates.html">
+        <div class="tag">Templates · 1040 × 720</div>
+        <div class="nm">Slide Templates — Premier</div>
+        <div class="desc">A4-landscape layouts ported from the source PPTX: Cover (D-watermark) and Content (P-divider, comparison table, milestone timeline). Drop-in starters.</div>
+      </a>
+      <a class="card" href="PPT Shapes.html">
+        <div class="tag">PPT shapes · 40-piece</div>
+        <div class="nm">PPT Shapes — Executive Set</div>
+        <div class="desc">Forty flat-solid shapes in Shinhan Blue — basic geometry plus chart and KPI primitives, ready to copy into PowerPoint.</div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Color</h2>
+    <p class="lede">Shinhan Blue (Pantone 2388 C) anchors everything. Premier sub-brand inverts to gold-on-cream.</p>
+    <div class="grid">
+      <a class="card" href="preview/colors-primary.html"><div class="tag">Primary</div><div class="nm">Shinhan Blue</div><div class="desc">#0046FF · #0023B3 · the brand's anchor pair.</div></a>
+      <a class="card" href="preview/colors-secondary.html"><div class="tag">Secondary</div><div class="nm">Secondary Blues</div><div class="desc">Light → Sky → Royal → Navy four-step ladder.</div></a>
+      <a class="card" href="preview/colors-premier.html"><div class="tag">Sub-brand</div><div class="nm">Premier Palette</div><div class="desc">Gold + cream — for Premier surfaces only.</div></a>
+      <a class="card" href="preview/colors-neutrals.html"><div class="tag">Neutrals</div><div class="nm">Cool Greys</div><div class="desc">Slight blue cast; avoid warm/sepia greys.</div></a>
+      <a class="card" href="preview/colors-semantic.html"><div class="tag">Semantic</div><div class="nm">Up · Down · Warning · Success</div><div class="desc">KR finance: up = red, down = blue.</div></a>
+      <a class="card" href="preview/colors-gradients.html"><div class="tag">Gradients</div><div class="nm">Hero Gradients</div><div class="desc">grad-shinhan · grad-sky · grad-premier.</div></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Typography</h2>
+    <p class="lede">OneShinhan (원신한) — proprietary humanist sans, three weights bundled. Pretendard fallback.</p>
+    <div class="grid">
+      <a class="card" href="preview/type-display.html"><div class="tag">Display</div><div class="nm">Display</div><div class="desc">신한금융그룹 · 56 px Bold.</div></a>
+      <a class="card" href="preview/type-headings.html"><div class="tag">Headings</div><div class="nm">H1 → H5</div><div class="desc">56 / 40 / 32 / 24 / 20.</div></a>
+      <a class="card" href="preview/type-body.html"><div class="tag">Body</div><div class="nm">Body · Small · Caption</div><div class="desc">15 px body · 13 small · 12 caption · eyebrow.</div></a>
+      <a class="card" href="preview/type-weights.html"><div class="tag">Weights</div><div class="nm">300 / 400 / 500 / 700</div><div class="desc">Light · Regular · Medium · Bold ladder.</div></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Spacing &amp; surface</h2>
+    <p class="lede">4-pt spacing scale, generous radii in superSOL, restrained radii on the corporate site.</p>
+    <div class="grid">
+      <a class="card" href="preview/spacing-scale.html"><div class="tag">Spacing</div><div class="nm">4-pt Scale</div><div class="desc">--s-1 → --s-20.</div></a>
+      <a class="card" href="preview/spacing-radii.html"><div class="tag">Radii</div><div class="nm">Corner Radii</div><div class="desc">xs → 2xl plus pill.</div></a>
+      <a class="card" href="preview/spacing-shadows.html"><div class="tag">Elevation</div><div class="nm">Shadows</div><div class="desc">sm · md · lg · blue (CTA glow).</div></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Components</h2>
+    <p class="lede">Atoms inferred from superSOL screens and the corporate website. Pill-radius primary CTA dominates the app.</p>
+    <div class="grid">
+      <a class="card" href="preview/components-buttons.html"><div class="tag">Component</div><div class="nm">Buttons</div><div class="desc">Primary · gradient · secondary · ghost · disabled.</div></a>
+      <a class="card" href="preview/components-cards.html"><div class="tag">Component</div><div class="nm">Cards</div><div class="desc">superSOL feed cards: 자산 · 소비 · 주식.</div></a>
+      <a class="card" href="preview/components-inputs.html"><div class="tag">Component</div><div class="nm">Inputs</div><div class="desc">Label, focus ring, error state.</div></a>
+      <a class="card" href="preview/components-badges.html"><div class="tag">Component</div><div class="nm">Badges &amp; Chips</div><div class="desc">Up · down · neutral · accent · Premier · status dot.</div></a>
+      <a class="card" href="preview/components-bottomnav.html"><div class="tag">Component</div><div class="nm">Bottom Nav</div><div class="desc">홈 · 금융 · 상품 · 혜택 · 주식.</div></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Brand assets</h2>
+    <p class="lede">Logo lockups, dividers, and the Premier "P" ornament — pulled from the source PPTX template.</p>
+    <div class="grid">
+      <a class="card" href="preview/brand-logos.html"><div class="tag">Logos</div><div class="nm">Logo Lockups</div><div class="desc">Shinhan Investment Securities · Shinhan Premier.</div></a>
+      <a class="card" href="preview/brand-dividers.html"><div class="tag">Ornament</div><div class="nm">Dividers &amp; Ornaments</div><div class="desc">Slide top rule · 챕터 제목 → divider → 본문 패턴.</div></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>UI kits</h2>
+    <p class="lede">Recreations of consumer surfaces — superSOL super-app and (planned) corporate web.</p>
+    <div class="feature">
+      <a class="card" href="ui_kits/supersol/README.md">
+        <div class="tag">UI kit · iOS · Korean</div>
+        <div class="nm">superSOL — Mobile App</div>
+        <div class="desc">React component set: iOS frame, status bar, glass nav pills, grouped lists, plus Shinhan-branded HeaderBar / BottomNav / Card / Button / Nudge atoms. See <code>ui_kits/supersol/components.jsx</code> and <code>ios-frame.jsx</code>.</div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Source-of-truth tokens live in <code>colors_and_type.css</code>. See <code>README.md</code> for voice/tone, iconography, and asset usage rules. OneShinhan font files in <code>fonts/</code>.
+</footer>
+
+</body>
+</html>

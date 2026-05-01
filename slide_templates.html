@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<title>Slide Templates — Shinhan Premier</title>
+<link rel="stylesheet" href="colors_and_type.css"/>
+<style>
+  /* ============================================================
+     Two slide templates rebuilt from the executive deck sample
+     (uploads/예시.pptx). Slide size matches the source: A4
+     landscape, 1040 × 720 px (= 9906000 × 6858000 EMU).
+
+     Type-1  COVER       (slideLayout2): full-bleed pale-blue
+                         "D" watermark, Premier mark top-right,
+                         Shinhan Investment mark bottom-left.
+
+     Type-2  CONTENT     (slideLayout1): hairline rule + Premier
+                         "P" glyph at top, page-number bottom-
+                         right, body area with chapter title,
+                         centered overhead, square-bullet
+                         points, comparison table, milestone
+                         timeline. Built to match the executive
+                         deck reference (Korean WM workshop).
+     ============================================================ */
+
+  body {
+    margin: 0;
+    background: #1a1f2c;
+    font-family: var(--font-sans);
+    color: var(--fg1);
+  }
+
+  deck-stage {
+    --slide-w: 1040px;
+    --slide-h: 720px;
+  }
+
+  section.slide {
+    width: 1040px;
+    height: 720px;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    font-family: var(--font-sans);
+    color: var(--fg1);
+  }
+
+  /* =========================================================
+     TYPE 1 · COVER
+     ========================================================= */
+  .cover { background: #ffffff; }
+  .cover .watermark {
+    position: absolute;
+    left: 154px; top: 27px;
+    width: 886px; height: 693px;
+    background-image: url("assets/template-watermark-D.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+  .cover .premier-mark {
+    position: absolute;
+    top: 30px; right: 14px;
+    width: 122px; height: 20px;
+    background: url("assets/template-premier-mark.png") no-repeat center/contain;
+  }
+  .cover .securities-mark {
+    position: absolute;
+    left: 14px; bottom: 20px;
+    width: 126px; height: 22px;
+    background: url("assets/template-securities-mark.png") no-repeat center/contain;
+  }
+  .cover .content {
+    position: absolute;
+    left: 80px; top: 220px;
+    width: 540px; z-index: 2;
+  }
+  .cover .eyebrow {
+    font-size: 14px; font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--premier-gold);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .cover .title {
+    font-family: var(--font-display);
+    font-size: 56px; font-weight: 700;
+    line-height: 1.12; letter-spacing: -0.02em;
+    color: var(--fg1);
+    margin: 0 0 22px;
+  }
+  .cover .title em {
+    font-style: normal;
+    color: var(--premier-gold);
+  }
+  .cover .subtitle {
+    font-size: 19px; font-weight: 500;
+    line-height: 1.55;
+    color: var(--fg2);
+    margin: 0 0 36px;
+  }
+  .cover .meta {
+    display: flex; gap: 28px;
+    font-size: 13px; color: var(--fg3);
+  }
+  .cover .meta strong {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--fg4);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+  .cover .meta span {
+    font-size: 14px;
+    color: var(--fg2);
+    font-weight: 500;
+  }
+  .cover .meta .div { width: 1px; background: var(--line); }
+
+  /* =========================================================
+     TYPE 2 · CONTENT — executive-deck style
+     ========================================================= */
+  .content-slide { background: #ffffff; }
+
+  /* Chapter label, top-left of slide. */
+  .chapter-label {
+    position: absolute;
+    top: 24px; left: 36px;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--shinhan-blue-deep);
+    letter-spacing: -0.005em;
+    line-height: 1.1;
+  }
+
+  /* Top divider — sits just below the chapter title with a
+     tight gap.  Title at top:24px font 16px line-height 1.1
+     → baseline ~38px, so line at top:46px gives ~6px gap. */
+  .content-slide .top-rule {
+    position: absolute;
+    top: 50px;
+    left: 36px;
+    right: 78px;
+    height: 1px;
+    background: var(--shinhan-blue-deep);
+  }
+  .content-slide .top-p {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 36px;
+    height: 42px;
+    overflow: hidden;
+  }
+  .content-slide .top-p img {
+    display: block;
+    height: 100%;
+    width: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  /* Centered overhead (the headline statement) */
+  .content-slide .overhead {
+    position: absolute;
+    top: 92px; left: 60px; right: 60px;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--fg1);
+    letter-spacing: -0.005em;
+  }
+  .content-slide .overhead .accent { color: var(--shinhan-blue-deep); }
+
+  /* Square bullet — "■ heading-style sentence" */
+  .square-bullet {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--fg1);
+    line-height: 1.5;
+    padding-left: 16px;
+    position: relative;
+  }
+  .square-bullet::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 7px;
+    width: 8px; height: 8px;
+    background: var(--shinhan-blue-deep);
+  }
+  .square-bullet .hl { color: var(--shinhan-blue-deep); }
+
+  .sub-bullet {
+    font-size: 13px;
+    color: var(--fg2);
+    line-height: 1.55;
+    padding-left: 14px;
+    position: relative;
+  }
+  .sub-bullet::before {
+    content: "–";
+    position: absolute;
+    left: 0; top: 0;
+    color: var(--fg3);
+  }
+  .sub-bullet .hl { color: var(--shinhan-blue-deep); font-weight: 700; }
+
+  /* Strike-through for deprecated terms (모, 母 etc.) */
+  .strike { text-decoration: line-through; text-decoration-thickness: 1px; }
+
+  .page-number {
+    position: absolute;
+    bottom: 14px; right: 36px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--fg3);
+  }
+
+  /* ===== Comparison table ===== */
+  .cmp-table {
+    width: 84%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 12.5px;
+    table-layout: fixed;
+  }
+  .cmp-table th, .cmp-table td {
+    padding: 5px 8px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.35;
+    border: 1px solid var(--line);
+    font-size: 11.5px;
+  }
+  .cmp-table thead th {
+    background: #eaf0fa;
+    color: var(--fg1);
+    font-size: 12.5px;
+    font-weight: 700;
+    height: 26px;
+  }
+  .cmp-table thead th.subhead {
+    background: #f5f7fb;
+    font-weight: 500;
+    color: var(--fg2);
+    font-size: 11.5px;
+    height: 22px;
+  }
+  .cmp-table thead th.tobe {
+    background: #eaf0fa;
+    color: var(--fg1);
+  }
+  .cmp-table .rowhead {
+    background: #fafbfd;
+    font-weight: 700;
+    color: var(--fg1);
+    font-size: 13px;
+    width: 14%;
+  }
+  .cmp-table .tobe-cell {
+    color: var(--fg1);
+    font-weight: 500;
+  }
+  .cmp-table .tobe-cell .hl {
+    color: var(--shinhan-blue-deep);
+    font-weight: 700;
+  }
+  .cmp-table .asis-cell { color: var(--fg2); }
+  .cmp-table .asis-cell b { color: var(--fg1); font-weight: 700; }
+  .cmp-table-note {
+    width: 84%;
+    margin: 6px auto 0;
+    text-align: right;
+    font-size: 10.5px;
+    color: var(--fg3);
+  }
+
+  /* ===== Timeline ===== */
+  .timeline {
+    position: relative;
+    width: 86%;
+    margin: 0 auto;
+    height: 96px;
+    padding-top: 4px;
+  }
+  .timeline-arrow {
+    position: absolute;
+    left: 0; right: 0;
+    top: 22px;
+    height: 18px;
+    background: linear-gradient(90deg, #d6e2f5 0%, #c0d4ef 100%);
+    border-radius: 0 4px 4px 0;
+    clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%);
+  }
+  .timeline-points {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    z-index: 2;
+  }
+  .tp { text-align: center; padding-top: 6px; }
+  .tp .date {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--fg1);
+    margin-bottom: 6px;
+  }
+  .tp .dot {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2.5px solid var(--shinhan-blue-deep);
+    margin: 0 auto 8px;
+    box-sizing: border-box;
+  }
+  .tp .label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--shinhan-blue-deep);
+  }
+  .tp.muted .label { color: var(--fg2); font-weight: 500; }
+  .tp.muted .dot { border-color: var(--fg4); }
+  .tp .sublabel {
+    font-size: 10.5px;
+    color: var(--fg3);
+    font-weight: 400;
+    line-height: 1.4;
+    margin-top: 4px;
+  }
+</style>
+</head>
+<body>
+
+<deck-stage width="1040" height="720">
+
+  <!-- =====================================================
+       SLIDE 01 · COVER  (Type 1)
+       ===================================================== -->
+  <section class="slide cover" data-screen-label="01 Cover">
+    <div class="watermark"></div>
+    <div class="content">
+      <div class="eyebrow">Shinhan Premier · 2026</div>
+      <h1 class="title">자산관리의<br/>새로운 <em>기준</em>을<br/>제시합니다</h1>
+      <p class="subtitle">신한 프리미어의 통합 자산관리 전략 보고<br/>경영진 워크샵</p>
+      <div class="meta">
+        <div><strong>발표</strong><span>WM본부장</span></div>
+        <div class="div"></div>
+        <div><strong>일시</strong><span>2026.05.14 14:00</span></div>
+        <div class="div"></div>
+        <div><strong>장소</strong><span>본사 8F 대회의실</span></div>
+      </div>
+    </div>
+    <div class="premier-mark"></div>
+    <div class="securities-mark"></div>
+  </section>
+
+  <!-- =====================================================
+       SLIDE 02 · CONTENT  (Type 2 — executive-deck reference)
+       ===================================================== -->
+  <section class="slide content-slide" data-screen-label="02 Content">
+    <div class="chapter-label">Ⅲ-1. 본부장워크샵 논의_New 슈퍼SOL — 1. 추진 경과</div>
+    <div class="top-rule"></div>
+    <div class="top-p"><img src="assets/divider-premier.png" alt=""/></div>
+
+    <div class="overhead">
+      現 슈퍼SOL의 한계를 극복하고 혁신적 서비스 제공을 위해<br/>
+      <span class="accent">SOL뱅크 기반의 New 슈퍼SOL로 再구축 진행 중</span>
+    </div>
+
+    <!-- Bullet 1 + comparison table -->
+    <div style="position:absolute; top:178px; left:60px; right:60px;">
+      <div class="square-bullet">
+        하나의 앱에 그룹사별 금융 커버리지 <span class="hl">100%</span>를 달성하여 New 슈퍼SOL에서 모든 업무 처리 완결 목표
+      </div>
+
+      <table class="cmp-table" style="margin-top:14px;">
+        <colgroup>
+          <col style="width:14%"/>
+          <col style="width:24%"/>
+          <col style="width:24%"/>
+          <col style="width:38%"/>
+        </colgroup>
+        <thead>
+          <tr>
+            <th rowspan="2" style="background:transparent;border:none;"></th>
+            <th colspan="2">As-is</th>
+            <th rowspan="2" class="tobe">To-be</th>
+          </tr>
+          <tr>
+            <th class="subhead" style="background:transparent;border:none;"></th>
+            <th class="subhead">한계점</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rowhead">채널</td>
+            <td class="asis-cell"><b>신규 독립 앱 기반</b></td>
+            <td class="asis-cell">별도 앱 설치 필요<br/>장기간/고비용 소요</td>
+            <td class="tobe-cell">
+              <span class="hl">SOL뱅크 기반의 New슈퍼SOL 구축</span><br/>
+              <span style="color:var(--fg3);font-size:11.5px;">(SOL뱅크를 슈퍼SOL로 변환하고<br/>카/증/라가 입점)</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="rowhead">상품/서비스<br/>커버리지</td>
+            <td class="asis-cell">
+              그룹사별 <b>핵심 서비스 선별 제공</b><br/>
+              <span style="font-size:11.5px;color:var(--fg3);">(커버리지 30% 수준, 그 외 업무는<br/>그룹사 <span class="strike">母</span>앱에서 처리)</span>
+            </td>
+            <td class="asis-cell">
+              가입 후에도 일부 기능<br/>부재로<br/>기존 <span class="strike">母</span>앱 지속 사용 중
+            </td>
+            <td class="tobe-cell">
+              그룹사별 <span class="hl">고객 체감 커버리지 100%*</span> 달성<br/>
+              <span style="color:var(--fg3);font-size:11.5px;">(슈퍼SOL내에서 모든 업무 처리)</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="rowhead">차별화</td>
+            <td class="asis-cell"><b>고혜택 비금융 서비스 확대</b><br/>
+              <span style="font-size:11.5px;color:var(--fg3);">(멤버십, 통합금융존, 챌린지)</span>
+            </td>
+            <td class="asis-cell">체감 혜택으로는 부족</td>
+            <td class="tobe-cell">
+              <span class="hl">혁신적 서비스로 차별화</span><br/>
+              <span style="color:var(--fg3);font-size:11.5px;">(생성형 AI, Open금융서비스 등)</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="cmp-table-note">* 당사는 주식거래 중심 간편 앱 기준 커버리지 100% 中 주요 금융상품 개념</div>
+    </div>
+
+    <!-- Bullet 2 + timeline -->
+    <div style="position:absolute; top:540px; left:60px; right:60px;">
+      <div class="square-bullet">
+        그룹의 사업 추진 방향 설정 완료 후 당사는 커버리지 확대를 위해 TF 구성 후 플랫폼 구축 中
+      </div>
+      <div class="sub-bullet" style="margin-top:6px;margin-left:18px;">
+        사업방향과 투자에 대한 전산운영위원회 승인 후 TF를 구성하여 증/라 공동 근무 site에서 진행 中
+      </div>
+
+      <div class="timeline" style="margin-top:8px;">
+        <div class="timeline-arrow"></div>
+        <div class="timeline-points">
+          <div class="tp muted">
+            <div class="date">'25.1월</div>
+            <div class="dot"></div>
+            <div class="label" style="color:var(--fg2);font-weight:500;">사업 추진 방향<br/>설정 완료</div>
+          </div>
+          <div class="tp">
+            <div class="date">'25.7월</div>
+            <div class="dot"></div>
+            <div class="label">증권 직원 파견 및<br/>구축 업체 선정</div>
+          </div>
+          <div class="tp">
+            <div class="date">'25.12월</div>
+            <div class="dot"></div>
+            <div class="label">New 슈퍼SOL<br/>TF 구성</div>
+            <div class="sublabel">*플랫폼 구축, 마케팅, 상품/서비스 구현 등<br/>자기 완결적 사업 수행을 위한 전담 조직</div>
+          </div>
+          <div class="tp">
+            <div class="date">'26.6.15</div>
+            <div class="dot"></div>
+            <div class="label">GRAND<br/>OPEN</div>
+          </div>
+          <div class="tp">
+            <div class="date">'27.2월</div>
+            <div class="dot"></div>
+            <div class="label">증권 차세대 &amp;<br/>추가 커버리지<br/>OPEN</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-number">2 / 12</div>
+  </section>
+
+  <!-- =====================================================
+       SLIDE 03 · COVER  (Variant — section opener)
+       ===================================================== -->
+  <section class="slide cover" data-screen-label="03 Section Cover">
+    <div class="watermark"></div>
+    <div class="content">
+      <div class="eyebrow">Section · Ⅱ</div>
+      <h1 class="title">사업 추진 <em>방향</em>과<br/>전략적 목표</h1>
+      <p class="subtitle">은행 고객의 증권 고객화를 위한<br/>플랫폼 · 마케팅 · 상품 통합 전략</p>
+      <div class="meta">
+        <div><strong>섹션</strong><span>Ⅱ. Strategy</span></div>
+        <div class="div"></div>
+        <div><strong>슬라이드</strong><span>3 — 7</span></div>
+      </div>
+    </div>
+    <div class="premier-mark"></div>
+    <div class="securities-mark"></div>
+  </section>
+
+  <!-- =====================================================
+       SLIDE 04 · CONTENT (blank — shows template chrome only,
+       use as starter for new slides)
+       ===================================================== -->
+  <section class="slide content-slide" data-screen-label="04 Content (blank)">
+    <div class="chapter-label">Ⅲ-X. 섹션명_세부 주제 — N. 슬라이드 주제</div>
+    <div class="top-rule"></div>
+    <div class="top-p"><img src="assets/divider-premier.png" alt=""/></div>
+
+    <div class="overhead">
+      슬라이드의 핵심 메시지를 한 줄로 — 두 줄까지 가능합니다<br/>
+      <span class="accent">강조하고 싶은 결론은 진청색으로</span>
+    </div>
+
+    <div style="position:absolute; top:210px; left:60px; right:60px;">
+      <div class="square-bullet">
+        본문 첫 번째 포인트 — <span class="hl">핵심 키워드</span>는 진청색으로 강조
+      </div>
+      <div class="sub-bullet" style="margin-top:8px;margin-left:18px;">
+        부가 설명은 들여쓰기 후 회색 톤으로 처리
+      </div>
+
+      <div style="margin-top:24px;" class="square-bullet">
+        본문 두 번째 포인트
+      </div>
+      <div class="sub-bullet" style="margin-top:8px;margin-left:18px;">
+        본문 영역에는 표 · 차트 · 타임라인 등을 자유롭게 배치
+      </div>
+
+      <div style="margin-top:60px; padding:60px; border:1px dashed var(--line-strong); border-radius:8px; text-align:center; color:var(--fg4); font-size:13px;">
+        본문 콘텐츠 영역 (표 · 차트 · 다이어그램 · 타임라인)
+      </div>
+    </div>
+
+    <div class="page-number">4 / 12</div>
+  </section>
+
+</deck-stage>
+
+<script src="deck-stage.js"></script>
+</body>
+</html>

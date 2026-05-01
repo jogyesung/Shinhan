@@ -1,0 +1,251 @@
+/* ============================================================
+   Shinhan Financial Group — Colors & Type
+   ============================================================
+   Single-source-of-truth for the brand's visual foundations.
+   Sources: Shinhan Financial Group CI guidelines (official
+   shinhangroup.com/en/about/identity/ci) + extracted theme
+   from Shinhan Premier / superSOL deck template.
+
+   FONTS
+   OneShinhan (원신한) is the brand's proprietary Korean
+   typeface. Files live in /fonts as .otf + .ttf. Three
+   weights ship: Light (300), Medium (500), Bold (700).
+   Pretendard remains a fallback for any glyphs OneShinhan
+   does not cover.
+   ============================================================ */
+
+@font-face{
+  font-family:"OneShinhan";
+  src:url("fonts/OneShinhanLight.otf") format("opentype"),
+      url("fonts/OneShinhanLight.ttf") format("truetype");
+  font-weight:300; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"OneShinhan";
+  src:url("fonts/OneShinhanMedium.otf") format("opentype"),
+      url("fonts/OneShinhanMedium.ttf") format("truetype");
+  font-weight:400 500; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"OneShinhan";
+  src:url("fonts/OneShinhanBold.otf") format("opentype"),
+      url("fonts/OneShinhanBold.ttf") format("truetype");
+  font-weight:600 700; font-style:normal; font-display:swap;
+}
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+
+:root {
+  /* ───────── PRIMARY (CI) ─────────
+     "Shinhan Blue" is THE brand color. Use for logos, key CTAs,
+     accent strokes. Per CI page, the official Pantone is 2388 C
+     mapped to #0046ff. The deck template uses a slightly deeper
+     #0023B3 for headings — both are canonical Shinhan blues. */
+  --shinhan-blue: #0046ff;        /* Pantone 2388 C — primary */
+  --shinhan-blue-deep: #0023b3;   /* Heading / section title */
+  --black: #000000;
+  --white: #ffffff;
+
+  /* ───────── SECONDARY (CI) ─────────
+     Four supporting blues from the official CI guidelines.
+     Use for data-vis, status, illustration washes. */
+  --light-blue: #8cd2f5;          /* Pantone 2905 C */
+  --sky-blue:   #4baff5;          /* Pantone 298  C */
+  --royal-blue: #2878f5;          /* Pantone 2727 C */
+  --navy-blue:  #00236e;          /* Pantone 288  C */
+
+  /* ───────── PREMIER GOLD ─────────
+     Shinhan Premier (private banking / wealth management
+     sub-brand) uses a warm gold wordmark on cream/white. */
+  --premier-gold: #b18a3a;
+  --premier-gold-soft: #c9a35a;
+  --premier-cream: #faf6ec;
+
+  /* ───────── NEUTRALS ─────────
+     Cool greys that read alongside the blues. */
+  --fg1: #0f1426;     /* near-black text */
+  --fg2: #2b3243;     /* secondary text */
+  --fg3: #5a6376;     /* tertiary / metadata */
+  --fg4: #8a92a3;     /* placeholder / disabled */
+  --bg1: #ffffff;     /* surface */
+  --bg2: #f5f7fb;     /* app background, panel */
+  --bg3: #eef1f7;     /* subtle separator block */
+  --line: #e1e5ee;    /* hairline borders */
+  --line-strong: #c8cfdb;
+
+  /* ───────── SEMANTIC ─────────
+     Drawn from financial-app conventions used in superSOL:
+     red for losses (stock down), blue/navy for gains/up. */
+  --positive: #ff3b3b;   /* KR finance convention: up = red  */
+  --negative: #1a73ff;   /* down = blue */
+  --warning:  #ff9b1f;
+  --success:  #18b364;
+
+  /* ───────── GRADIENTS ─────────
+     Hero gradient lifted from superSOL app icon + key CTAs. */
+  --grad-shinhan: linear-gradient(135deg, #2878f5 0%, #0046ff 60%, #0023b3 100%);
+  --grad-sky:     linear-gradient(180deg, #8cd2f5 0%, #4baff5 100%);
+  --grad-premier: linear-gradient(135deg, #c9a35a 0%, #8a6a26 100%);
+
+  /* ───────── ELEVATION ───────── */
+  --shadow-sm: 0 1px 2px rgba(15, 20, 38, 0.06);
+  --shadow-md: 0 4px 14px rgba(15, 20, 38, 0.08);
+  --shadow-lg: 0 18px 40px rgba(15, 20, 38, 0.10);
+  --shadow-blue: 0 12px 30px rgba(0, 70, 255, 0.22);
+
+  /* ───────── RADII ─────────
+     superSOL uses generously-rounded cards (16–20px) and
+     pill buttons. The corporate website uses a more
+     restrained 4–8px on form controls. */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-pill: 9999px;
+
+  /* ───────── SPACING (4-pt scale) ───────── */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-20: 80px;
+
+  /* ───────── TYPOGRAPHY ─────────
+     Stacks: Korean → Pretendard (substitute for OneShinhan).
+     Latin → Inter as a clean grotesk pair.
+     Both Pretendard & OneShinhan share a humanist-grotesk
+     skeleton, so layouts compose well between the two. */
+  --font-kr: "OneShinhan", "원신한", "Pretendard", -apple-system,
+             "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic",
+             system-ui, sans-serif;
+  --font-en: "OneShinhan", "Inter", -apple-system, BlinkMacSystemFont,
+             "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-kr);
+  --font-display: var(--font-kr);
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Type scale — desktop. Step from 12 → 56. */
+  --t-caption: 12px;
+  --t-small: 13px;
+  --t-body: 15px;
+  --t-body-lg: 17px;
+  --t-h6: 18px;
+  --t-h5: 20px;
+  --t-h4: 24px;
+  --t-h3: 32px;
+  --t-h2: 40px;
+  --t-h1: 56px;
+  --t-display: 72px;
+
+  /* Weights — OneShinhan ships in 4 weights; Pretendard
+     covers the same range. Keep usage to these four. */
+  --w-light: 300;
+  --w-regular: 400;
+  --w-medium: 500;
+  --w-bold: 700;
+
+  /* Line heights */
+  --lh-tight: 1.15;
+  --lh-snug: 1.3;
+  --lh-normal: 1.5;
+  --lh-loose: 1.7;
+}
+
+/* ============================================================
+   SEMANTIC TYPE STYLES
+   Use these instead of hand-rolling sizes/weights.
+   ============================================================ */
+
+.h1, h1 {
+  font-family: var(--font-display);
+  font-size: var(--t-h1);
+  font-weight: var(--w-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.02em;
+  color: var(--fg1);
+}
+.h2, h2 {
+  font-family: var(--font-display);
+  font-size: var(--t-h2);
+  font-weight: var(--w-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.015em;
+  color: var(--fg1);
+}
+.h3, h3 {
+  font-family: var(--font-display);
+  font-size: var(--t-h3);
+  font-weight: var(--w-bold);
+  line-height: var(--lh-snug);
+  letter-spacing: -0.01em;
+  color: var(--fg1);
+}
+.h4, h4 {
+  font-family: var(--font-display);
+  font-size: var(--t-h4);
+  font-weight: var(--w-bold);
+  line-height: var(--lh-snug);
+  color: var(--fg1);
+}
+.h5, h5 {
+  font-family: var(--font-sans);
+  font-size: var(--t-h5);
+  font-weight: var(--w-bold);
+  line-height: var(--lh-snug);
+  color: var(--fg1);
+}
+.h6, h6 {
+  font-family: var(--font-sans);
+  font-size: var(--t-h6);
+  font-weight: var(--w-medium);
+  line-height: var(--lh-snug);
+  color: var(--fg1);
+}
+.p, p, .body {
+  font-family: var(--font-sans);
+  font-size: var(--t-body);
+  font-weight: var(--w-regular);
+  line-height: var(--lh-normal);
+  color: var(--fg2);
+}
+.small {
+  font-size: var(--t-small);
+  line-height: var(--lh-normal);
+  color: var(--fg3);
+}
+.caption {
+  font-size: var(--t-caption);
+  line-height: var(--lh-normal);
+  color: var(--fg3);
+  letter-spacing: 0.01em;
+}
+.eyebrow {
+  font-family: var(--font-en);
+  font-size: var(--t-caption);
+  font-weight: var(--w-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--shinhan-blue-deep);
+}
+.code, code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--bg2);
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-xs);
+}
+
+/* Sentinel: surfaces a Premier-flavored heading */
+.h-premier {
+  font-family: var(--font-display);
+  color: var(--premier-gold);
+  letter-spacing: 0.01em;
+}

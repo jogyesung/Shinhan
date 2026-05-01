@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"/>
+<title>Inputs</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>body{margin:0;padding:24px;background:#fff;font-family:var(--font-sans);}
+.field{margin-bottom:14px;}
+label{display:block;font-size:12px;color:var(--fg3);margin-bottom:6px;font-weight:500;}
+input,select{font-family:var(--font-sans);font-size:15px;padding:12px 14px;border-radius:12px;border:1px solid var(--line-strong);background:#fff;width:100%;box-sizing:border-box;color:var(--fg1);}
+input:focus{outline:none;border-color:var(--shinhan-blue);box-shadow:0 0 0 3px rgba(0,70,255,.12);}
+.err{border-color:var(--positive)!important;}
+.hint{font-size:11px;margin-top:5px;color:var(--positive);}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+</style></head>
+<body>
+<div class="row">
+  <div class="field"><label>계좌번호</label><input value="110-238-491045"/></div>
+  <div class="field"><label>금액 (원)</label><input value="150,000" autofocus/></div>
+</div>
+<div class="field"><label>받는 사람</label><input class="err" value=""/><div class="hint">이름을 입력해 주세요</div></div>
+</body></html>

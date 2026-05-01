@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/>
+<title>Shadows</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>body{margin:0;padding:32px 24px;background:var(--bg2);font-family:var(--font-sans);}
+.row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.box{background:#fff;border-radius:14px;height:96px;display:flex;flex-direction:column;justify-content:flex-end;padding:12px;}
+.nm{font-family:var(--font-mono);font-size:11px;color:var(--fg2);}
+.dx{font-size:10px;color:var(--fg4);font-family:var(--font-mono);margin-top:2px;}
+</style></head>
+<body>
+<div class="row">
+  <div class="box" style="box-shadow:var(--shadow-sm)"><div class="nm">--shadow-sm</div><div class="dx">0 1px 2px / .06</div></div>
+  <div class="box" style="box-shadow:var(--shadow-md)"><div class="nm">--shadow-md</div><div class="dx">0 4px 14px / .08</div></div>
+  <div class="box" style="box-shadow:var(--shadow-lg)"><div class="nm">--shadow-lg</div><div class="dx">0 18px 40px / .10</div></div>
+  <div class="box" style="box-shadow:var(--shadow-blue)"><div class="nm">--shadow-blue</div><div class="dx">0 12px 30px Shinhan/22</div></div>
+</div>
+</body></html>

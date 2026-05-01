@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/>
+<title>Semantic Colors</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  body{margin:0;padding:24px;background:var(--bg1);font-family:var(--font-sans);}
+  .row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  .sw{border-radius:var(--radius-md);padding:14px;height:120px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;}
+  .sw .nm{font-weight:700;font-size:13px;}
+  .sw .pan{font-size:11px;opacity:0.85;margin-top:2px;}
+  .sw .hex{font-family:var(--font-mono);font-size:11px;opacity:0.9;}
+</style></head>
+<body>
+<div class="row">
+  <div class="sw" style="background:#ff3b3b"><div><div class="nm">Positive (KR)</div><div class="pan">Stock up · Gain</div></div><div class="hex">#FF3B3B</div></div>
+  <div class="sw" style="background:#1a73ff"><div><div class="nm">Negative (KR)</div><div class="pan">Stock down · Loss</div></div><div class="hex">#1A73FF</div></div>
+  <div class="sw" style="background:#ff9b1f"><div><div class="nm">Warning</div><div class="pan">Pending / attention</div></div><div class="hex">#FF9B1F</div></div>
+  <div class="sw" style="background:#18b364"><div><div class="nm">Success</div><div class="pan">Completed</div></div><div class="hex">#18B364</div></div>
+</div>
+</body></html>

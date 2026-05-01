@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"/>
+<title>Badges & chips</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>body{margin:0;padding:24px;background:#fff;font-family:var(--font-sans);display:flex;flex-direction:column;gap:14px;}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+.tag{font-size:12px;padding:4px 10px;border-radius:6px;font-weight:700;}
+.up{background:#ffe9e9;color:var(--positive);}
+.dn{background:#e7efff;color:var(--negative);}
+.neu{background:#eef1f7;color:var(--fg2);}
+.acc{background:var(--shinhan-blue);color:#fff;}
+.gold{background:var(--premier-cream);color:var(--premier-gold);border:1px solid #ecdfb8;}
+.dot{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--fg2);}
+.dot::before{content:"";width:8px;height:8px;border-radius:9999px;background:var(--success);}
+</style></head>
+<body>
+<div class="row"><span class="tag up">+234%</span><span class="tag dn">-31.5%</span><span class="tag neu">대기</span><span class="tag acc">NEW</span><span class="tag gold">PREMIER</span></div>
+<div class="row"><span class="dot">실시간 거래중</span><span class="dot" style="--c:var(--warning);"><span></span>휴면</span></div>
+</body></html>

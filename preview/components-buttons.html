@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"/>
+<title>Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>body{margin:0;padding:24px;background:#fff;font-family:var(--font-sans);}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px;}
+.btn{font-family:var(--font-sans);font-weight:700;font-size:15px;padding:14px 22px;border-radius:9999px;border:none;cursor:pointer;letter-spacing:-0.005em;}
+.primary{background:var(--shinhan-blue);color:#fff;box-shadow:var(--shadow-blue);}
+.primary-grad{background:var(--grad-shinhan);color:#fff;box-shadow:var(--shadow-blue);}
+.secondary{background:#eef1f7;color:var(--fg1);}
+.ghost{background:transparent;color:var(--shinhan-blue);border:1px solid #c5d4f7;}
+.disabled{background:#dde2ec;color:#8a92a3;}
+.sm{padding:8px 14px;font-size:13px;}
+.lbl{font-family:var(--font-mono);font-size:11px;color:var(--fg3);}
+</style></head>
+<body>
+<div class="row">
+  <button class="btn primary">올리기</button>
+  <button class="btn primary-grad">슈퍼SOL 가입</button>
+  <button class="btn secondary">홈설정</button>
+  <button class="btn ghost">다음에 할게요</button>
+  <button class="btn disabled" disabled>준비 중</button>
+</div>
+<div class="row">
+  <button class="btn primary sm">이체</button>
+  <button class="btn secondary sm">조회</button>
+  <button class="btn ghost sm">설정</button>
+</div>
+<div class="lbl">Pill radius · Bold weight · primary uses --shadow-blue glow</div>
+</body></html>
